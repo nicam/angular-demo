@@ -6,7 +6,10 @@
       <h4>Using directives</h4>
       <input type="text" data-ng-model="query">
       <ul>
-        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">{{person.name}} - {{person.location}}</li>
+        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">
+          {{person.name}} - {{person.location}}
+          <button data-ng-click="removePerson($index)">remove me</button>
+        </li>
       </ul>
       Name <input type="text" data-ng-model="name">
       Location <input type="text" data-ng-model="location">
@@ -25,6 +28,10 @@
             name: $scope.name,
             location: $scope.location
           });
+        }
+
+        $scope.removePerson = function (index) {
+          $scope.persons.splice(index, 1);
         }
       }
     </script>
