@@ -8,6 +8,9 @@
       <ul>
         <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">{{person.name}} - {{person.location}}</li>
       </ul>
+      Name <input type="text" data-ng-model="name">
+      Location <input type="text" data-ng-model="location">
+      <button data-ng-click="addPerson()">Add Person</button>
     </div>
     <script>
       function testController($scope) {
@@ -16,6 +19,13 @@
           { name: 'Peter', location: 'St. Gallen' },
           { name: 'Hans', location: 'Ebenalp' }
         ];
+
+        $scope.addPerson = function () {
+          $scope.persons.push({
+            name: $scope.name,
+            location: $scope.location
+          });
+        }
       }
     </script>
     <script type="text/javascript" src="angular.js"></script>
