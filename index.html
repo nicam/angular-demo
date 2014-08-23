@@ -6,7 +6,7 @@
       <h4>Using directives</h4>
       <input type="text" data-ng-model="query">
       <ul>
-        <li data-ng-repeat="person in persons | filter:query">{{person.name}} - {{person.location}}</li>
+        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">{{person.name}} - {{person.location}}</li>
       </ul>
     </div>
     <script>
