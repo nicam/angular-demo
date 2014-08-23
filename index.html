@@ -1,12 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
   <body ng-app>
-    <div class="container">
-        <h3>Data Binding Fundamentals</h3>
-        <h4>Using a Data Binding Template</h4>
-        Name: <input type="text" data-ng-model="name" placeholder="Type something" /> {{ name }}
-        <script type="text/javascript" src="angular.js"></script>
+    <div class="container" data-ng-init="names = ['Pascal', 'Peter', 'Hans']">
+      <h3>Data Binding</h3>
+      <h4>Using directives</h4>
+      <ul>
+        <li ng-repeat="name in names">{{name}}</li>
+      </ul>
     </div>
+    <script type="text/javascript" src="angular.js"></script>
   </body>
 </html>
 
