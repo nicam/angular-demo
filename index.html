@@ -8,7 +8,7 @@
       <ul>
         <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">
           {{person.name}} - {{person.location}}
-          <button data-ng-click="removePerson($index)">remove me</button>
+          <button data-ng-click="removePerson(person)">remove me</button>
         </li>
       </ul>
       Name <input type="text" data-ng-model="name">
@@ -30,8 +30,8 @@
           });
         }
 
-        $scope.removePerson = function (index) {
-          $scope.persons.splice(index, 1);
+        $scope.removePerson = function (person) {
+          $scope.persons.splice($scope.persons.indexOf(person), 1);
         }
       }
     </script>
