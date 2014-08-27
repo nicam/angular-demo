@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
   <body ng-app>
-    <div data-ng-controller="testController">
+    <div ng-controller="testController">
       Search: <input ng-model="query">
       <ul>
-        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">
+        <li ng-repeat="person in persons | filter:query | orderBy:'name'">
           {{person.name}} - {{person.location}}
         </li>
       </ul>
@@ -18,7 +18,7 @@
         ];
       }
     </script>
-    <script type="text/javascript" src="angular.js"></script>
+    <script src="angular.js"></script>
   </body>
 </html>
 
