@@ -1,12 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
-  <body ng-app>
+  <body ng-app="app">
 
     <div data-ng-init="names = ['Peter', 'Hans', 'Pascal']">
+
+      <ul>
+        <li ng-repeat="name in names"><blink>{{name}}</blink></li>
+      </ul>
 
     </div>
 
     <script src="angular.js"></script>
+    <script src="blink.js"></script>
   </body>
 </html>
 
