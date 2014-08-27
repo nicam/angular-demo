@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
   <body ng-app>
-    <div class="container" data-ng-controller="testController">
-      <h3>Data Binding</h3>
-      <h4>Using directives</h4>
-      <input type="text" data-ng-model="query">
+    <div data-ng-controller="testController">
+      Search: <input ng-model="query">
       <ul>
-        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">{{person.name}} - {{person.location}}</li>
+        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">
+          {{person.name}} - {{person.location}}
+        </li>
       </ul>
     </div>
     <script>
