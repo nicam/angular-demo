@@ -2,9 +2,9 @@
 <html>
   <body ng-app>
     <div class="container" data-ng-init="names = ['Pascal', 'Peter', 'Hans']">
-
+    <input ng-model="query">
       <ul>
-        <li ng-repeat="name in names">{{name}}</li>
+        <li ng-repeat="name in names | filter:query | limitTo:2">{{name | uppercase}}</li>
       </ul>
     </div>
 
