@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', []);
+var app = angular.module('app', []);
 
-myApp.controller('TestController', function ($scope) {
+app.controller('TestController', function ($scope) {
   $scope.persons = [
     { name: 'Pascal', location: 'Wil' },
     { name: 'Peter', location: 'St. Gallen' },
