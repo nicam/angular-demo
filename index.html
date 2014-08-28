@@ -2,9 +2,8 @@
 <html>
   <body data-ng-app="app">
     <div class="container" data-ng-controller="TestController">
-      <h3>Data Binding</h3>
-      <h4>Using directives</h4>
-      <input type="text" data-ng-model="query">
+
+      Search: <input type="text" data-ng-model="query">
       <ul>
         <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">
           {{person.name}} - {{person.location}}
@@ -15,8 +14,8 @@
       Location <input type="text" data-ng-model="location">
       <button data-ng-click="addPerson()">Add Person</button>
     </div>
-    <script type="text/javascript" src="angular.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
 
