@@ -1,18 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
-  <body data-ng-app="app">
-    <div class="container" data-ng-controller="TestController">
+  <body ng-app="app">
+    <div class="container" ng-controller="TestController">
+      Search: <input type="text" ng-model="query">
 
-      Search: <input type="text" data-ng-model="query">
       <ul>
-        <li data-ng-repeat="person in persons | filter:query | orderBy:'name'">
+        <li ng-repeat="person in persons | filter:query | orderBy:'name'">
           {{person.name}} - {{person.location}}
-          <button data-ng-click="removePerson(person)">remove me</button>
+          <button ng-click="removePerson(person)">remove me</button>
         </li>
       </ul>
-      Name <input type="text" data-ng-model="name">
-      Location <input type="text" data-ng-model="location">
-      <button data-ng-click="addPerson()">Add Person</button>
+      
+      Name <input type="text" ng-model="name">
+      Location <input type="text" ng-model="location">
+      <button ng-click="addPerson()">Add Person</button>
+
     </div>
     <script src="angular.js"></script>
     <script src="app.js"></script>
