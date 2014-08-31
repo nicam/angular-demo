@@ -6,14 +6,14 @@
 
       <ul>
         <li ng-repeat="person in persons | filter:query | orderBy:'name'">
-          {{person.name}} - {{person.location}}
+          <span>{{person.name}} - {{person.location}}</span>
           <button ng-click="removePerson(person)">remove me</button>
         </li>
       </ul>
       
       Name <input type="text" ng-model="name">
       Location <input type="text" ng-model="location">
-      <button ng-click="addPerson()">Add Person</button>
+      <button id="addButton" ng-click="addPerson()">Add Person</button>
 
     </div>
     <script src="angular.js"></script>
