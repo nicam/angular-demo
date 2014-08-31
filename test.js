@@ -9,6 +9,12 @@ describe('simple list', function() {
     browser.get('http://angular.lo');
   });
 
+  it('should find only one user', function () {
+    var searchField = element(by.model('query'));
+    searchField.sendKeys('hans');
+    expect(listElements.count()).toEqual(1);
+  });
+
   it('should add a user', function() {
     name.sendKeys("Hugo");
     location.sendKeys("Zürich");
