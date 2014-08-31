@@ -1,4 +1,4 @@
-// spec.js
+// test.js
 describe('simple list', function() {
   var name = element(by.model('name'));
   var location = element(by.model('location'));
