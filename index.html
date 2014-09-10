@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
   <body ng-app>
-    <div class="container" data-ng-init="names = ['Pascal', 'Peter', 'Hans']">
+    <div class="container" data-ng-init="persons = ['Pascal', 'Peter', 'Hans']">
 
+      Search: <input type="text" data-ng-model="query">
       <ul>
-        <li ng-repeat="name in names">{{name}}</li>
+        <li data-ng-repeat="person in persons | filter:query">{{person}}</li>
       </ul>
+
     </div>
 
     <script src="angular.js"></script>
